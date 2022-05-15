@@ -1,4 +1,3 @@
-
 // + =
 
 // Dark Mode ---------
@@ -18,31 +17,6 @@ mode.addEventListener("click",(eo) => {
 })
 
 //  End Dark Mode ---------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -131,13 +105,53 @@ const allChange = document.querySelectorAll(".allChange")
 // progress bar 
 const allSkills = document.querySelectorAll(".all")
 
-// switch-color
-// const switchColor = document.querySelector(".switch-color")
+// loader-color
+const loader = document.querySelector(".loader ")
 
 
+// localStorage set==========================================
+// localStorage.clear()
 
+if (localStorage.red != null) {
+    aboutImg.style.backgroundColor = localStorage.red
+    navSpan.forEach(item => {item.style.color = localStorage.red})
+    moving.style.backgroundColor = localStorage.red
+    allChange.forEach(item => {item.style.backgroundColor = localStorage.red})
+    allSkills.forEach(item => {item.style.backgroundColor = localStorage.red})
+    switchColor.style.backgroundColor = localStorage.red
+    loader.style.borderTopColor= localStorage.red
 
+}
+if (localStorage.green != null) {
+    aboutImg.style.backgroundColor = localStorage.green
+    navSpan.forEach(item => {item.style.color = localStorage.green})
+    moving.style.backgroundColor = localStorage.green
+    allChange.forEach(item => {item.style.backgroundColor = localStorage.green})
+    allSkills.forEach(item => {item.style.backgroundColor = localStorage.green})
+    switchColor.style.backgroundColor = localStorage.green
+    loader.style.borderTopColor= localStorage.green
 
+}
+if (localStorage.pink != null) {
+    aboutImg.style.backgroundColor = localStorage.pink
+    navSpan.forEach(item => {item.style.color = localStorage.pink})
+    moving.style.backgroundColor = localStorage.pink
+    allChange.forEach(item => {item.style.backgroundColor = localStorage.pink})
+    allSkills.forEach(item => {item.style.backgroundColor = localStorage.pink})
+    switchColor.style.backgroundColor = localStorage.pink
+    loader.style.borderTopColor= localStorage.pink
+
+}
+if (localStorage.default != null) {
+    aboutImg.style.backgroundColor = localStorage.default
+    navSpan.forEach(item => {item.style.color = localStorage.default})
+    moving.style.backgroundColor = localStorage.default
+    allChange.forEach(item => {item.style.backgroundColor = localStorage.default})
+    allSkills.forEach(item => {item.style.backgroundColor = localStorage.default})
+    switchColor.style.backgroundColor = localStorage.default
+    loader.style.borderTopColor= localStorage.default
+
+}
 
 
 
@@ -155,6 +169,11 @@ switchMenu.addEventListener("click",(eo) => {
         aboutImg.classList.remove("toGreenBack")
         aboutImg.classList.remove("toBlackBack")
         aboutImg.classList.remove("toDefaultBack")
+        // localStorage
+        localStorage.setItem("red" ,"#f72b1c")
+        localStorage.removeItem("green")
+        localStorage.removeItem("pink")
+        localStorage.removeItem("default")
 
         // ----
         navSpan.forEach(item => {
@@ -190,6 +209,8 @@ switchMenu.addEventListener("click",(eo) => {
         switchColor.classList.remove("toGreenBack")
         switchColor.classList.remove("toBlackBack")
         switchColor.classList.remove("toDefaultBack")
+        // ----
+        
 
         
 
@@ -201,6 +222,11 @@ switchMenu.addEventListener("click",(eo) => {
         aboutImg.classList.remove("toRedBack")
         aboutImg.classList.remove("toBlackBack")
         aboutImg.classList.remove("toDefaultBack")
+         // localStorage
+         localStorage.setItem("green" ,"#72b626")
+         localStorage.removeItem("red")
+         localStorage.removeItem("pink")
+         localStorage.removeItem("default")
 
         // ----
         navSpan.forEach(item => {
@@ -244,6 +270,11 @@ switchMenu.addEventListener("click",(eo) => {
         aboutImg.classList.remove("toRedBack")
         aboutImg.classList.remove("toGreenBack")
         aboutImg.classList.remove("toDefaultBack")
+         // localStorage
+         localStorage.setItem("pink" ,"#ee6192")
+         localStorage.removeItem("red")
+         localStorage.removeItem("green")
+         localStorage.removeItem("default")
 
         // ----
         navSpan.forEach(item => {
@@ -293,6 +324,13 @@ switchMenu.addEventListener("click",(eo) => {
         aboutImg.classList.remove("toBlackBack")
         aboutImg.classList.remove("toRedBack")
         aboutImg.classList.remove("toGreenBack")
+        // localStorage
+        localStorage.setItem("default" ,"#ffbf00")
+        localStorage.removeItem("red")
+        localStorage.removeItem("green")
+        localStorage.removeItem("pink")
+
+
         // ----toDefaultColor
         navSpan.forEach(item => {
             item.classList.add("toDefaultColor")
@@ -339,7 +377,7 @@ const navlink = document.querySelector(".nav-link")
 const exitIconChild = document.querySelector(".exitIconChild")
 const navlinks = document.querySelector(".nav-links")
 
-console.log(navlinks);
+// console.log(navlinks);
 
 miniMenu.addEventListener("click",(eo) => {
     navlink.classList.add("nav-linkShow")
@@ -370,10 +408,8 @@ window.onload = function  () {
 }
 
 
-
 setTimeout(on, 2000);
 
 function on(params) {
     onloading.style.display ="none"
 }
-
