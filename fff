@@ -1,0 +1,10 @@
+<div class="contact container">
+        <h1 class="allChange">
+            < Contact />
+        </h1>
+        <form class="row">
+            <input type="text"class=' col-8' placeholder="Name..."/>
+            <input type="text" class=' col-8' placeholder="Email..."/>
+            <textarea placeholder="Your Massage..." value="" class="col-8"></textarea>
+        </form>
+    </div>
