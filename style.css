@@ -980,10 +980,34 @@ footer{
 
 
 
+  .card_pro{
+    /* border: solid 2px red; */
+  }
 
 
+.outline_card{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
+}
 
+.card_pro  {
+    /* background-color: #c92026; */
+}
+/* .card_pro:hover  {
+    transform: translate(0,-1rem);
+    -webkit-transform: translate(0,-1rem);
+    -moz-transform: translate(0,-1rem);
+    -ms-transform: translate(0,-1rem);
+    -o-transform: translate(0,-1rem);
+} */
+
+.card_pro img {
+    width: 100% ;
+}
 
 
 
