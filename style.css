@@ -626,6 +626,7 @@ footer {
   padding: 10px 15px;
   color: var(--firstColor);
   margin-bottom: 10px;
+  text-transform: lowercase;
 }
 
 .links-contact:hover {
