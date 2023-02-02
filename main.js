@@ -1,4 +1,3 @@
-// + =
 
 // Dark Mode ---------
 const mode = document.querySelector(".switch-mode");
@@ -28,6 +27,8 @@ const cardRight = document.querySelectorAll(".card-right");
 const cardLeft = document.querySelectorAll(".card-left");
 const projects = document.querySelector(".projects");
 // --------------------
+let proTable = document.getElementById("proTable");
+
 
 window.onscroll = function () {
   // ---------onscrll progress bar
@@ -357,7 +358,6 @@ const navlink = document.querySelector(".nav-link");
 const exitIconChild = document.querySelector(".exitIconChild");
 const navlinks = document.querySelectorAll(".nav-links");
 
-
 // console.log(navlinks);
 
 miniMenu.addEventListener("click", (eo) => {
@@ -368,27 +368,42 @@ exitIconChild.addEventListener("click", (eo) => {
   navlink.classList.remove("nav-linkShow");
 });
 
-
-function remove () {
+function remove() {
   navlink.classList.remove("nav-linkShow");
-  
 }
 
-const aboutt = document.querySelector(".about")
-console.log(aboutt)
-
+const aboutt = document.querySelector(".about");
+console.log(aboutt);
 
 const onloading = document.querySelector(".onloading");
 // const bodyy = document.querySelector("body")
 
 window.onload = function () {};
-aboutt.style.marginTop="0px"
-aboutt.style.opacity="1"
+aboutt.style.marginTop = "0px";
+aboutt.style.opacity = "1";
 
 setTimeout(on, 1000);
 
-function on(params) {
+function on() {
   onloading.style.marginTop = "1000px";
   onloading.style.transition = "2s";
 }
 
+
+// ARRAY OF PROJECT 
+// const readProduct=()=>{
+//   for (let i = 0; i < ArrProjects.length; i++) {
+//     proTable.innerHTML +=`
+//     <div class="card_pro col-md-4">
+//             <a
+//               class="outline_card btn btn-warning"
+//               href="${ArrProjects[i].url}"
+//               target="_blank"
+//               >Live demo</a
+//             >
+//             <img src="${ArrProjects[i].image}" alt="img" />
+//           </div>
+//     `
+//   }
+// };
+// readProduct();
