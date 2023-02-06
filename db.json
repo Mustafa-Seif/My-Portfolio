@@ -1,0 +1,59 @@
+
+ {
+  "ArrProjects":[
+    {
+      "title":"Berwon",
+      "description":"E-commerce using Anguler / Anguler Material / primeNg / Anguler reactive forms",
+      "url":"https://anguler-berown-com-e-commerce.vercel.app/",
+      "image":"./assets/1.png"
+    },
+    {
+      "title":"Dior",
+      "description":"E-commerce using React.js / Redux / React hook form",
+      "url":"https://react-dior-e-commerce.vercel.app/",
+      "image":"./assets/2.png"
+    },
+    {
+      "title":"Architecture",
+      "description":"It is Responsive landing page by HTML5, CSS3, and pure JavaScript.",
+      "url":"https://architecture-vanilla-js-and-jquery.vercel.app/",
+      "image":"./assets/3.png"
+    },
+    {
+      "title":"Mogo",
+      "description":"Responsive Landing Page for all devices screen Using HTML5 Bootstrap 5 and SCSS",
+      "url":"https://mogo-seven.vercel.app/",
+      "image":"./assets/4.png"
+    },
+    
+    {
+      "title":"Product-management-system",
+      "description":"Crud project with html css pure js ",
+      "url":"https://product-management-system-liard.vercel.app/",
+      "image":"./assets/5.png"
+    },
+    {
+      "title":"Kitopia",
+      "description":"Kitopia is a children's community that includes everything a child needs to enjoy the time spent on the Internet",
+      "url":"https://github.com/Mustafa-Seif/KITOPIA-ITI-Project/",
+      "image":"./assets/6.png"
+    },
+    {
+      "title":"Dorsin",
+      "description":"It is a landing page responsive built using React js.",
+      "url":"https://dorsin-react-js.vercel.app/",
+      "image":"./assets/7.png"
+    },
+    {
+      "title":"Kababs",
+      "description":"Responsive Landing Page for all devices screen Using HTML5 Bootstrap 5 and SCSS",
+      "url":"https://kababs-ten.vercel.app/",
+      "image":"./assets/8.png"
+    },
+    {"title":"OMN",
+      "description":"It is Responsive by HTML5, CSS3, and pure JavaScript",
+      "url":"https://omn-vanilla-js-and-jquery.vercel.app/",
+      "image":"./assets/9.png"
+    }
+    ]
+ } 

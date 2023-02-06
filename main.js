@@ -391,19 +391,21 @@ function on() {
 
 
 // ARRAY OF PROJECT 
-const readProduct=()=>{
-  for (let i = 0; i < ArrProjects.length; i++) {
-    proTable.innerHTML +=`
-    <div class="card_pro col-md-4">
-            <a
-              class="outline_card btn btn-warning"
-              href="${ArrProjects[i].url}"
-              target="_blank"
-              >Live demo</a
-            >
-            <img src="${ArrProjects[i].image}" alt="img" />
-          </div>
-    `
-  }
+let Arr=[];
+let _url ='./db.json'
+onload = ()=>{
+  fetch(_url)
+  .then((response) => response.json())
+  .then((data) =>{
+    for (let i = 0; i < data.ArrProjects.length; i++) {
+      proTable.innerHTML +=`
+      <div class="card_pro border col-md-4">
+              <a class="outline_card" target="_blanck" href="${data.ArrProjects[i].url}">
+                <p >${data.ArrProjects[i].description}</p>
+               </a>
+              <img src="${data.ArrProjects[i].image}" alt="img" />
+            </div>
+      `
+    }
+  })
 };
-readProduct();
