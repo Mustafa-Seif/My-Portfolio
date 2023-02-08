@@ -637,6 +637,8 @@ footer {
   margin-top: 20px;
 }
 
+
+
 /* -----------------dark mode --------------*/
 .darkness {
   background-color: var(--firstColor);
@@ -811,7 +813,7 @@ footer {
 .outline_card {
   position: absolute;
   transform: translate(0, -20rem);
-  width: 100%;
+  width: 90%;
   transition: 300ms !important ;
   height: 100%;
   color: #fff !important;
@@ -819,7 +821,7 @@ footer {
 }
 .outline_card p {
   width: 70%;
-  margin: 10% 10%;
+  margin: 10% auto;
 }
 
 .projects {
@@ -837,7 +839,8 @@ footer {
 }
 
 .card_pro img {
-  width: 120% !important;
+  width: 102% ;
+  height: 220px;
 }
 
 /* contact */

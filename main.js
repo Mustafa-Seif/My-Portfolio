@@ -1,14 +1,30 @@
-
 // Dark Mode ---------
 const mode = document.querySelector(".switch-mode");
 const iconMode = document.querySelector(".fa-moon");
 const body = document.querySelector("body");
 // ------------------
 
+// ADD DARK MOOD WITH LOCAL STORAGE
+let IsDark = false;
+
+// window.addEventListener("load", () => {
+  if (localStorage.getItem("darkMode") != null) {
+    mode.classList.add("darkness");
+    body.classList.add("dark");
+    IsDark=true
+  }
+// });
+
 mode.addEventListener("click", (eo) => {
   if (eo.target.classList == "fa-solid fa-moon moon" || "switch-mode") {
+    IsDark = !IsDark;
     mode.classList.toggle("darkness");
     body.classList.toggle("dark");
+  }
+  if (IsDark == true) {
+    localStorage.setItem("darkMode", true);
+  } else {
+    localStorage.removeItem("darkMode");
   }
 });
 //  End Dark Mode ---------
@@ -28,7 +44,6 @@ const cardLeft = document.querySelectorAll(".card-left");
 const projects = document.querySelector(".projects");
 // --------------------
 let proTable = document.getElementById("proTable");
-
 
 window.onscroll = function () {
   // ---------onscrll progress bar
@@ -373,7 +388,6 @@ function remove() {
 }
 
 const aboutt = document.querySelector(".about");
-console.log(aboutt);
 
 const onloading = document.querySelector(".onloading");
 // const bodyy = document.querySelector("body")
@@ -389,23 +403,22 @@ function on() {
   onloading.style.transition = "2s";
 }
 
-
-// ARRAY OF PROJECT 
-let Arr=[];
-let _url ='./db.json'
-onload = ()=>{
+// ARRAY OF PROJECT
+let Arr = [];
+let _url = "./db.json";
+onload = () => {
   fetch(_url)
-  .then((response) => response.json())
-  .then((data) =>{
-    for (let i = 0; i < data.ArrProjects.length; i++) {
-      proTable.innerHTML +=`
-      <div class="card_pro border col-md-4">
+    .then((response) => response.json())
+    .then((data) => {
+      for (let i = 0; i < data.ArrProjects.length; i++) {
+        proTable.innerHTML += `
+      <div class="card_pro border  col-md-4">
               <a class="outline_card" target="_blanck" href="${data.ArrProjects[i].url}">
                 <p >${data.ArrProjects[i].description}</p>
                </a>
               <img src="${data.ArrProjects[i].image}" alt="img" />
             </div>
-      `
-    }
-  })
+      `;
+      }
+    });
 };
