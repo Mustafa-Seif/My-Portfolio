@@ -392,16 +392,23 @@ const aboutt = document.querySelector(".about");
 const onloading = document.querySelector(".onloading");
 // const bodyy = document.querySelector("body")
 
-window.onload = function () {};
 aboutt.style.marginTop = "0px";
 aboutt.style.opacity = "1";
 
-setTimeout(on, 1000);
 
-function on() {
-  onloading.style.marginTop = "1000px";
-  onloading.style.transition = "2s";
-}
+
+// setTimeout(on, 1000);
+
+// function on() {
+//   onloading.style.marginTop = "1000px";
+//   onloading.style.transition = "2s";
+// }
+
+$(window).on('load', function () {
+  $('.onloading').delay(3000).fadeOut('slow')
+})
+
+
 
 // ARRAY OF PROJECT
 let Arr = [];
